@@ -9,10 +9,12 @@ namespace sql_data_generator
     {
         public static async Task Main(string[] args)
         {
-            await Generator.GenerateAsync(
+            // We add operations here in the same manner
+            // CustomerOperation.GenerateAsync,
+            // ProductOperation.GenerateAsync,
+            // ...
 
-                //ItemBinCardOperation.GenerateAsync,
-                //StockTransferOperation.GenerateAsync,
+            await Generator.GenerateAsync(
                 InvoiceOperation.GenerateAsync,
                 context => Task.CompletedTask
             );
